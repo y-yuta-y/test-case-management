@@ -68,10 +68,10 @@ function App() {
         <table id='case-list'>
           <thead>
             <tr>
-              <th>ID</th>
+              <th className='narrow-col'>ID</th>
               <th>TestCase</th>
-              <th className='button-width'>Status</th>
-              <th className='button-width'>Remove</th>
+              <th className='narrow-col'>Status</th>
+              <th className='narrow-col'>Remove</th>
             </tr>
           </thead>
           <tbody>
