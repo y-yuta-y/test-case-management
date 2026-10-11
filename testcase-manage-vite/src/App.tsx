@@ -77,7 +77,7 @@ function App() {
           <tbody>
             {cases.map((c) => 
             <tr key={c.id} className={`stat-${c.status}`}>
-              <td>{c.id.slice(0,5)}</td>
+              <td title={c.id}>{c.id.slice(0,5)}</td>
               <td>{c.name}</td>
               <td>
                 <select value={c.status} onChange={e => updateStatus(e, c)}>
