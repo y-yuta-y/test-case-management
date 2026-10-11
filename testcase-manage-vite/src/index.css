@@ -1,5 +1,5 @@
 :root {
-  --text: #6b6375;
+  --text: #242127;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -25,6 +25,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --passed-bg-color: rgb(148, 243, 155);
+  --failed-bg-color: rgb(236, 143, 143);
+  --pending-bg-color: rgb(233, 216, 142);
+
   @media (max-width: 1024px) {
     font-size: 16px;
   }
@@ -32,7 +36,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #dde4f1;
     --text-h: #f3f4f6;
     --bg: #16171d;
     --border: #2e303a;
@@ -43,6 +47,10 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    
+    --passed-bg-color: rgb(0, 104, 7);
+    --failed-bg-color: rgb(167, 25, 25);
+    --pending-bg-color: rgb(136, 112, 5); 
   }
 
   #social .button-icon {

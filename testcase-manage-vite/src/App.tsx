@@ -64,19 +64,19 @@ function App() {
           <button>add</button>
         </form>
       </div>
-      <div id='case-list'>
-        <table>
+      <div>
+        <table id='case-list'>
           <thead>
             <tr>
               <th>ID</th>
               <th>TestCase</th>
-              <th>Status</th>
-              <th>Remove</th>
+              <th className='button-width'>Status</th>
+              <th className='button-width'>Remove</th>
             </tr>
           </thead>
           <tbody>
             {cases.map((c) => 
-            <tr key={c.id}>
+            <tr key={c.id} className={`stat-${c.status}`}>
               <td>{c.id.slice(0,5)}</td>
               <td>{c.name}</td>
               <td>
@@ -94,13 +94,13 @@ function App() {
           </tbody>
         </table>
       </div>
-      <div id='summary'>
-        <table>
+      <div>
+        <table id='summary-table'>
           <thead>
             <tr>
-              <th>PASSED</th>
-              <th>FAILED</th>
-              <th>PENDING</th>
+              <th className='stat-passed'>PASSED</th>
+              <th className='stat-failed'>FAILED</th>
+              <th className='stat-pending'>PENDING</th>
               <th>PASS RATE</th>
             </tr>
           </thead>
