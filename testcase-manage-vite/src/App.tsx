@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 import type { SubmitEvent, ChangeEvent} from 'react';
@@ -7,7 +7,19 @@ type Stat = 'passed' | 'failed' | 'pending';
 
 function App() {
   const [casename, setCasename] = useState<string>('')
-  const [cases, setCases] = useState<TestCase[]>([]);
+  const [cases, setCases] = useState<TestCase[]>(initCases);
+
+  function initCases(): TestCase[]{
+    const storedCase = localStorage.getItem('TestCases');
+    if(storedCase === null){
+      return [];
+    }
+    return JSON.parse(storedCase);
+  }
+
+  useEffect(() => {
+    localStorage.setItem('TestCases', JSON.stringify(cases));
+  }, [cases]);
 
   function updateCases(e: SubmitEvent<HTMLFormElement>, c: string){
     e.preventDefault();
