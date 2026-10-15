@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
+# Test Case management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Live demo: https://test-case-management-iota.vercel.app/
 
-Currently, two official plugins are available:
+## What can this do?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add test case(s).
+- Remove test case(s).
+- Change status.
+- Count test cases by each status.
+- Save list on local storage.
 
-## React Compiler
+## Why
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- When I managed test cases in Excel, my team members and I sometimes wasted time fixing the sheet. When adding or removing rows, formula ranges no longer covered the new rows and the formatting broke.
+- This app calculates the counts from the test case list on every render, so the results always stay correct when we add or remove test cases.
+- This is a prototype, and for my learning mainly JavaScript/TypeScript/React.
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- vite
+- React
+- TypeScript
+- Vercel
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## How to run
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Prerequisites
+  - Please make sure Node.js is installed before following steps.
+    - Tested with:
+      - node: v22.15.1
+      - npm: 10.9.2
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone this repository
+   1. Run following command in any folder on your computer.
 
-```
+   ```bash
+   git clone https://github.com/y-yuta-y/test-case-management.git
+   ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install packages
+   1. Move to cloned repository folder.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   cd test-case-management/testcase-manage-vite
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+   1. Install packages.
 
-```
+   ```bash
+   npm install
+   ```
+
+3. Run as developer mode
+   1. After the installation, run develop server.
+
+   ```bash
+   npm run dev
+   ```
+
+   1. Open the URL shown after the previous command and check it.
+
+   ```text
+   # example
+   npm run dev
+
+    > testcase-manage-vite@0.0.0 dev
+    > vite
+
+    VITE v8.3.3  ready in 652 ms
+
+    ➜  Local:   http://localhost:5173/ # ← Open this URL
+    ➜  Network: use --host to expose
+    ➜  press h + enter to show help
+   ```
