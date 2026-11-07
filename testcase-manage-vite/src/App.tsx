@@ -64,6 +64,26 @@ function App() {
           <button>add</button>
         </form>
       </div>
+            <div>
+        <table id='summary-table'>
+          <thead>
+            <tr>
+              <th className='stat-passed'>PASSED</th>
+              <th className='stat-failed'>FAILED</th>
+              <th className='stat-pending'>PENDING</th>
+              <th>PASS RATE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{passedCount}</td>
+              <td>{failedCount}</td>
+              <td>{pendingCount}</td>
+              <td>{cases.length > 0 ? `${Math.round(passedCount / cases.length * 100)} %` : '-'}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div>
         <table id='case-list'>
           <thead>
@@ -91,26 +111,6 @@ function App() {
               </td>
             </tr>
             )}
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <table id='summary-table'>
-          <thead>
-            <tr>
-              <th className='stat-passed'>PASSED</th>
-              <th className='stat-failed'>FAILED</th>
-              <th className='stat-pending'>PENDING</th>
-              <th>PASS RATE</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{passedCount}</td>
-              <td>{failedCount}</td>
-              <td>{pendingCount}</td>
-              <td>{cases.length > 0 ? `${Math.round(passedCount / cases.length * 100)} %` : '-'}</td>
-            </tr>
           </tbody>
         </table>
       </div>
