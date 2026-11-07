@@ -1,6 +1,6 @@
 # Test Case management
 
-- Live demo: https://test-case-management-iota.vercel.app/
+- Live demo: <https://test-case-management-iota.vercel.app/>
 
 ## What can this do?
 
@@ -34,42 +34,42 @@
 1. Clone this repository
    1. Run following command in any folder on your computer.
 
-   ```bash
-   git clone https://github.com/y-yuta-y/test-case-management.git
-   ```
+      ```bash
+      git clone https://github.com/y-yuta-y/test-case-management.git
+      ```
 
 2. Install packages
    1. Move to cloned repository folder.
 
-   ```bash
-   cd test-case-management/testcase-manage-vite
-   ```
+      ```bash
+      cd test-case-management/testcase-manage-vite
+      ```
 
    1. Install packages.
 
-   ```bash
-   npm install
-   ```
+      ```bash
+      npm install
+      ```
 
 3. Run as developer mode
    1. After the installation, run develop server.
 
-   ```bash
-   npm run dev
-   ```
+      ```bash
+      npm run dev
+      ```
 
    1. Open the URL shown after the previous command and check it.
 
-   ```text
-   # example
-   npm run dev
+      ```text
+      # example
+      npm run dev
 
-    > testcase-manage-vite@0.0.0 dev
-    > vite
+      > testcase-manage-vite@0.0.0 dev
+      > vite
 
-    VITE v8.3.3  ready in 652 ms
+      VITE v8.3.3  ready in 652 ms
 
-    ➜  Local:   http://localhost:5173/ # ← Open this URL
-    ➜  Network: use --host to expose
-    ➜  press h + enter to show help
-   ```
+      ➜  Local:   http://localhost:5173/ # ← Open this URL
+      ➜  Network: use --host to expose
+      ➜  press h + enter to show help
+      ```
