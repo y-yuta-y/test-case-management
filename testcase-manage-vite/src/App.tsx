@@ -58,9 +58,9 @@ function App() {
   return (
     <>
       <h1>Test cases</h1>
-      <div id='case-input'>
-        <form onSubmit={e => updateCases(e, casename)}>
-          <input value={casename} onChange={e => setCasename(e.target.value)}></input>
+      <div >
+        <form id='case-form' onSubmit={e => updateCases(e, casename)}>
+          <input id='case-input' value={casename} placeholder='e.g. the case is removed when the Remove button is clicked.' onChange={e => setCasename(e.target.value)}></input>
           <button>add</button>
         </form>
       </div>

@@ -7,8 +7,12 @@ div{
   margin: 10px;
 }
 
-#case-input{
+#case-form{
   text-align: left;
+}
+
+#case-input{
+  width: 60%;
 }
 
 table{
